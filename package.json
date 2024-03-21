@@ -1,0 +1,27 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "this is a food delivery app ",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Divyanshi Rastogi",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "D": "^1.0.0",
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}
