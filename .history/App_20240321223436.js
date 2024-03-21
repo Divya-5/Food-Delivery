@@ -2125,14 +2125,13 @@ const Header = () => {
     )
 }
 const RestaurantCard = ({ restaurant }) => {
-    //destructing object
-    const { cloudinaryImageId,name, cuisines, lastMileTravel} = restaurant.data;
+    const { cloudinaryImageId} = restaurant
     return (
         <div className="card">
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
-            <h2>{name}</h2>
-            <h3>{cuisines}</h3>
-            <h4>{lastMileTravel} minutes</h4>
+            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurant.data.cloudinaryImageId} />
+            <h2>{restaurant.data?.name}</h2>
+            <h3>{restaurant.data?.cuisines}</h3>
+            <h4>{restaurant.data?.lastMileTravel} minutes</h4>
         </div>
     )
 }

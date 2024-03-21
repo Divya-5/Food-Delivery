@@ -4927,44 +4927,46 @@ const Header = ()=>{
 };
 _c1 = Header;
 const RestaurantCard = ({ restaurant })=>{
+    //destructing object
+    const { cloudinaryImageId, name, cuisines, lastMileTravel } = restaurant.data;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurant.data.cloudinaryImageId
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 2130,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: restaurant.data?.name
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 2131,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: restaurant.data?.cuisines
+                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId
             }, void 0, false, {
                 fileName: "App.js",
                 lineNumber: 2132,
                 columnNumber: 13
             }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 2133,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 2134,
+                columnNumber: 13
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: [
-                    restaurant.data?.lastMileTravel,
+                    lastMileTravel,
                     " minutes"
                 ]
             }, void 0, true, {
                 fileName: "App.js",
-                lineNumber: 2133,
+                lineNumber: 2135,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 2129,
+        lineNumber: 2131,
         columnNumber: 9
     }, undefined);
 };
@@ -4977,41 +4979,41 @@ const Body = ()=>{
                 restaurant: restaurantList[0]
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2140,
+                lineNumber: 2142,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                 restaurant: restaurantList[1]
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2141,
+                lineNumber: 2143,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                 restaurant: restaurantList[2]
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2142,
+                lineNumber: 2144,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                 restaurant: restaurantList[3]
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2143,
+                lineNumber: 2145,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
                 restaurant: restaurantList[4]
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2144,
+                lineNumber: 2146,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 2139,
+        lineNumber: 2141,
         columnNumber: 9
     }, undefined);
 };
@@ -5021,7 +5023,7 @@ const Footer = ()=>{
         children: " Hello Footer"
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 2150,
+        lineNumber: 2152,
         columnNumber: 9
     }, undefined);
 };
@@ -5040,17 +5042,17 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2166,
+                lineNumber: 2168,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2167,
+                lineNumber: 2169,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 2168,
+                lineNumber: 2170,
                 columnNumber: 13
             }, undefined)
         ]
@@ -5060,7 +5062,7 @@ _c5 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 2174,
+    lineNumber: 2176,
     columnNumber: 13
 }, undefined)); // /**
  //  *
