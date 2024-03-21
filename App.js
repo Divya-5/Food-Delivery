@@ -2124,13 +2124,13 @@ const Header = () => {
         </div>
     )
 }
-const RestaurantCard = (props) => {
+const RestaurantCard = ({ restaurant }) => {
     return (
         <div className="card">
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + props.restaurant.data.cloudinaryImageId} />
-            <h2>{props.restaurant.data?.name}</h2>
-            <h3>{props.restaurant.data?.cuisines}</h3>
-            <h4>{props.restaurant.data?.lastMileTravel} minutes</h4>
+            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurant.data.cloudinaryImageId} />
+            <h2>{restaurant.data?.name}</h2>
+            <h3>{restaurant.data?.cuisines}</h3>
+            <h4>{restaurant.data?.lastMileTravel} minutes</h4>
         </div>
     )
 }
