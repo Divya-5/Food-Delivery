@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+
 /*
 > Header
     - logo
@@ -18,6 +20,7 @@ import ReactDOM from "react-dom/client";
     - Copyright
 
 */
+
 const restaurantList = [
     {
         type: "restaurant",
@@ -1882,27 +1885,31 @@ const RestaurantCard = ({
     // const { cloudinaryImageId,name, cuisines, lastMileTravel} = restaurant.data;
     return (
         <div className="card">
-            {/* <img
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      /> */}
+            <img
+                src={
+                    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+                    cloudinaryImageId
+                }
+            />
             <h2>{name}</h2>
-            <h3>{cuisines.join(",")}</h3>
-            {/* 
-      <h4>{lastMileTravel} minutes</h4> */}
+            <h3>{cuisines.join(", ")}</h3>
+
+            <h4>{lastMileTravel} minutes</h4>
         </div>
     );
 };
 const Body = () => {
     return (
         <div className="restaurant-list">
-            <RestaurantCard name={restaurantList[0].data.name} cuisines={restaurantList[0].data.cuisines} />
-            <RestaurantCard name={restaurantList[1].data.name} cuisines={restaurantList[1].data.cuisines} />
-            {/* <RestaurantCard restaurant={restaurantList[2]} />
-      <RestaurantCard restaurant={restaurantList[3]} />
-      <RestaurantCard restaurant={restaurantList[4]} /> */}
+            {restaurantList.map((restaurant) => {
+                return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />;
+            })}
+            {/* <RestaurantCard  {...restaurantList[0].data} />
+            <RestaurantCard  {...restaurantList[1].data} />
+            <RestaurantCard  {...restaurantList[2].data} />
+            <RestaurantCard  {...restaurantList[3].data} />
+            <RestaurantCard  {...restaurantList[4].data} />
+            <RestaurantCard  {...restaurantList[5].data} /> */}
         </div>
     );
 };
